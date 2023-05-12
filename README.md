@@ -1,3 +1,3 @@
-# Roman-Printer
+# Roman numeral converter
 
 A simple converter of Arabic integers to Roman numerals shown as ASCII Art
