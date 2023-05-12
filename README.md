@@ -1,4 +1,5 @@
-# Roman numeral converter
+
+#  Roman numeral converter [![Build](https://github.com/eliapasquali/MTSS-Assignment-2/actions/workflows/build.yml/badge.svg)](https://github.com/eliapasquali/MTSS-Assignment-2/actions/workflows/build.yml)
 
 
 ### Second Assignment of MTSS course
