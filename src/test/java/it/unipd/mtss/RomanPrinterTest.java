@@ -41,7 +41,7 @@ public class RomanPrinterTest {
 
 
     @Test
-    public void Print10ASCII() throws NegativeNumberException, ZeroException, BiggerThan1000Exception, NotRomanLetterException{
+    public void Print10ASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
         int number= 10;
         String ascii= RomanPrinter.print(number);
         String X =(" __   __  \n"+
@@ -53,6 +53,23 @@ public class RomanPrinterTest {
                 );
             
             assertEquals(X , ascii);
+    }
+
+
+    @Test 
+    public void PrintLASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
+        int number= 50;
+        String ascii= RomanPrinter.print(number);
+        String L =(
+            "  _       \n"+
+            " | |      \n"+
+            " | |      \n"+
+            " | |      \n"+
+            " | |____  \n"+
+            " |______| \n"
+        );
+            
+            assertEquals(L , ascii);
     }
 
 
