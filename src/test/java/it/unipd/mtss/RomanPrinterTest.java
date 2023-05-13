@@ -105,5 +105,20 @@ public class RomanPrinterTest {
             assertEquals(D , ascii);
     }
 
+    @Test
+    public void PrintMASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
+        int number= 1000;
+        String ascii= RomanPrinter.print(number);
+        String M =(
+            "  __  __   \n"+
+            " |  \\/  |  \n"+
+            " | \\  / |  \n"+
+            " | |\\/| |  \n"+
+            " | |  | |  \n"+
+            " |_|  |_|  \n");
+            
+            assertEquals(M , ascii);
+    }
+
 
 }
