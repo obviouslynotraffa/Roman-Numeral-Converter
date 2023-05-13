@@ -2,8 +2,14 @@ package it.unipd.mtss;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import org.junit.BeforeClass;
 
 public class IntegerToRomanTest {
+
+    @BeforeClass
+    public static void startConverter() {
+        IntegerToRoman converter = new IntegerToRoman();
+    }
 
     @Test
     public void convert3() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{

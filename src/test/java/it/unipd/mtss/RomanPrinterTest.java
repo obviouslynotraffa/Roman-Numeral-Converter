@@ -4,8 +4,15 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
+import org.junit.BeforeClass;
 
 public class RomanPrinterTest {
+
+
+    @BeforeClass
+    public static void startPrinter() {
+        RomanPrinter printer = new RomanPrinter();
+    }
     
     @Test
     public void Print1ASCII() throws NegativeNumberException, ZeroException, 
