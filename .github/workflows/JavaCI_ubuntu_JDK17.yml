@@ -1,4 +1,4 @@
-name: JavaCI_ubuntu_JDK17
+name: Ubuntu JDK17
 
 on: [push]
 
