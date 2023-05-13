@@ -40,4 +40,20 @@ public class RomanPrinterTest {
     } 
 
 
+    @Test
+    public void Print10ASCII() throws NegativeNumberException, ZeroException, BiggerThan1000Exception, NotRomanLetterException{
+        int number= 10;
+        String ascii= RomanPrinter.print(number);
+        String X =(" __   __  \n"+
+                 " \\ \\ / /  \n"+
+                 "  \\ V /   \n"+
+                 "   > <    \n"+
+                 "  / . \\   \n"+
+                 " /_/ \\_\\  \n"
+                );
+            
+            assertEquals(X , ascii);
+    }
+
+
 }
