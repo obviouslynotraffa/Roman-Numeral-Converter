@@ -1,4 +1,4 @@
-name: JavaCI_windows_JDK17
+name: Windows JDK17
 
 on: [push]
 
