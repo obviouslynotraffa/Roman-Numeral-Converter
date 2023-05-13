@@ -120,5 +120,13 @@ public class RomanPrinterTest {
             assertEquals(M , ascii);
     }
 
-
+    @Test(expected = NotRomanLetterException.class)
+    public void PrintNotRomanLetter() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException {
+        
+        try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
+            utilities.when(() -> IntegerToRoman.convert(123)).thenReturn("DefinitelyNotRoman");
+            RomanPrinter.print(123);
+        }
+    }
+    
 }
