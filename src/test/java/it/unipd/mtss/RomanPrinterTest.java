@@ -73,4 +73,21 @@ public class RomanPrinterTest {
     }
 
 
+    @Test
+    public void PrintCASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
+        int number= 100;
+        String ascii= RomanPrinter.print(number);
+        String C =(
+            "   _____   \n"+  
+            "  / ____|  \n"+
+            " | |       \n"+
+            " | |       \n"+
+            " | |____   \n"+
+            "  \\_____|  \n" 
+        );
+            
+            assertEquals(C , ascii);
+    }
+
+
 }
