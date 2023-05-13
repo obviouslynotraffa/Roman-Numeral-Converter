@@ -1,4 +1,4 @@
-name: JavaCI_macos_JDK17
+name: macOS JDK17
 
 on: [push]
 
