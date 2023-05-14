@@ -15,48 +15,76 @@ public class IntegerToRomanTest {
 
     @Test
     public void convert3() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(3), "III");
+
+        int arabic=3;
+        String roman="III";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 
     @Test
     public void convert6() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(6), "VI");
+        int arabic=6;
+        String roman="VI";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 
     @Test
     public void convert10() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(10), "X");
+        int arabic=10;
+        String roman="X";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
     
 
     @Test
     public void convert20() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(20), "XX");
+        int arabic=20;
+        String roman="XX";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 
     @Test
     public void convert50() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(50), "L");
+        int arabic=50;
+        String roman="L";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 
     @Test
     public void convert100() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(100), "C");
+        int arabic=100;
+        String roman="C";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 
     @Test
     public void convert200() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(200), "CC");
+        int arabic=200;
+        String roman="CC";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 
     @Test
     public void convert500() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(500), "D");
+        int arabic=500;
+        String roman="D";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 
     @Test
     public void convert1000() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
-        assertEquals(IntegerToRoman.convert(1000), "M");
+        int arabic=1000;
+        String roman="M";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 
     //Testing exception
@@ -79,5 +107,39 @@ public class IntegerToRomanTest {
         int bigger=5001;
 
         IntegerToRoman.convert(bigger);
+    }
+
+
+    //Testing random numbers
+    @Test
+    public void convert185() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
+        int arabic=185;
+        String roman="CLXXXV";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
+    }
+
+    @Test
+    public void convert1171() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
+        int arabic=1171;
+        String roman="MCLXXI";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
+    }
+
+    @Test
+    public void convert889() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
+        int arabic=889;
+        String roman="DCCCLXXXIX";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
+    }
+
+    @Test
+    public void convert395() throws ZeroException, BiggerThan5000Exception, NegativeNumberException{
+        int arabic=395;
+        String roman="CCCXCV";
+
+        assertEquals(IntegerToRoman.convert(arabic), roman);
     }
 }

@@ -66,7 +66,7 @@ public class RomanPrinterTest {
 
 
     @Test 
-    public void PrintLASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
+    public void Print50ASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
         int number= 50;
         String ascii= RomanPrinter.print(number);
         String L =(
@@ -83,7 +83,7 @@ public class RomanPrinterTest {
 
 
     @Test
-    public void PrintCASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
+    public void Print100ASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
         int number= 100;
         String ascii= RomanPrinter.print(number);
         String C =(
@@ -99,7 +99,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void PrintDASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
+    public void Print500ASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
         int number= 500;
         String ascii= RomanPrinter.print(number);
         String D =(
@@ -115,7 +115,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void PrintMASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
+    public void Print1000ASCII() throws NegativeNumberException, ZeroException, BiggerThan5000Exception, NotRomanLetterException{
         int number= 1000;
         String ascii= RomanPrinter.print(number);
         String M =(
@@ -137,5 +137,14 @@ public class RomanPrinterTest {
             RomanPrinter.print(123);
         }
     }
-    
+
+
+    @Test(expected = NullPointerException.class)
+    public void PrintNullInput() throws NegativeNumberException, BiggerThan5000Exception, NotRomanLetterException, ZeroException {
+        try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
+            utilities.when(() -> IntegerToRoman.convert(123)).thenReturn(null);
+            RomanPrinter.print(123);
+        }
+    }
+  
 }
