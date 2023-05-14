@@ -8,10 +8,12 @@ import org.junit.BeforeClass;
 
 public class RomanPrinterTest {
 
+    static RomanPrinter printer;
+
 
     @BeforeClass
     public static void startPrinter() {
-        RomanPrinter printer = new RomanPrinter();
+        printer = new RomanPrinter();
     }
     
     @Test

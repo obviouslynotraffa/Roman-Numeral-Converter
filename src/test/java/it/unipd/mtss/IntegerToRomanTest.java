@@ -6,9 +6,11 @@ import org.junit.BeforeClass;
 
 public class IntegerToRomanTest {
 
+    static IntegerToRoman converter;
+
     @BeforeClass
     public static void startConverter() {
-        IntegerToRoman converter = new IntegerToRoman();
+        converter = new IntegerToRoman();
     }
 
     @Test
