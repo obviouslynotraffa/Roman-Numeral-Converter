@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class RomanPrinter {
 
   public static String print(int num) throws ZeroException, NegativeNumberException,
-   BiggerThan5000Exception, NotRomanLetterException {
+   BiggerThan4000Exception, NotRomanLetterException {
   return printAsciiArt(IntegerToRoman.convert(num));
   }
 
@@ -106,6 +106,8 @@ public class RomanPrinter {
         result+="\n";
     }
 
-  return result;
+    return result;
   }
+   
 };
+

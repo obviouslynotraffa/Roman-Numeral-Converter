@@ -4,8 +4,8 @@
 ////////////////////////////////////////////////////////////////////
 package it.unipd.mtss;
 
-public class BiggerThan5000Exception extends Exception {
-    public BiggerThan5000Exception(){
-        super("Numbers greater than 5000 don't exist in Roman numerals!");
+public class BiggerThan4000Exception extends Exception {
+    public BiggerThan4000Exception(){
+        super("Numbers greater than 4000 are not supported!");
     }
 }
